@@ -11,6 +11,9 @@ const TaskSchema = new mongoose.Schema({
         type: Boolean,
     }
 }, { timestamps: true });
+TaskSchema.index({
+    title:"text"
+})
 
 const Task = mongoose.model('Task', TaskSchema);
 
